@@ -4,7 +4,7 @@
     const book=$page.data.latestBook;
 </script>
 <div>
-    <Card img="{ book.img }">
+    <Card img="{ book.img }" href="/books/{book.bookid}.html">
         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             最新收录的书
         </h5>
