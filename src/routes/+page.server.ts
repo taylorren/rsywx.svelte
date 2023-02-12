@@ -6,8 +6,7 @@ export async function load() {
   const bm:BookManager= new BookManager();
   const latestBook=await bm.getLatestBook(1);
   const randomBook=await bm.getRandomBook(1);
-console.log(latestBook);
-console.log(randomBook);
+
   return {
     latestBook: latestBook[0],
     randomBook: randomBook[0],
