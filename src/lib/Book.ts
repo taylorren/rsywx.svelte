@@ -8,4 +8,5 @@ export interface Book {
     purchdate: string,
     translated: boolean,
     copyrighter: string,
+    vc: number,
 }
