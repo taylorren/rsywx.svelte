@@ -19,7 +19,16 @@ export class BookManager {
     async getBookById(bookId: string):Promise<Book>{
         const uri=this.base+"/books/"+bookId;
         const data=await this._getBook(uri);
-console.log(data);
+
+        return data;
+    }
+
+    async getSummary(){
+        const uri=this.base+"/books";
+        const ret=await fetch(uri);
+        const json=await ret.json();
+        const data=await json['data'];
+
         return data;
     }
 
