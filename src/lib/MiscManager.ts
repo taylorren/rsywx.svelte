@@ -1,10 +1,9 @@
-import type { Qotd } from "./Qotd";
-
+import type { Qotd } from "./Interfaces";
+import { BASE_URI } from './Interfaces';
 export class MiscManager {
-  private base = "http://lumen";
-
+  
   async getQotd(): Promise<Qotd> {
-    const uri = this.base + "/qotd";
+    const uri = BASE_URI + "/qotd";
     const ret = await fetch(uri);
     const json = await ret.json();
     const data = await json["data"] as Qotd[];

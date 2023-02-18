@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { Book } from "../lib/Book";
+  import type { Book } from "../lib/Interfaces";
 
   interface booksToday {
     y: number;

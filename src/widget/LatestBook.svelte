@@ -1,7 +1,7 @@
 <script lang="ts">
     import { Card, Button, Badge } from "flowbite-svelte";
     import { page } from '$app/stores';
-    import type { Book } from "../lib/Book";
+    import type { Book } from "../lib/Interfaces";
     const book:Book=$page.data.latestBook;
 </script>
 <div>

@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Card, Button, Tooltip } from "flowbite-svelte";
   import { page } from "$app/stores";
-  import type { Qotd } from "../lib/Qotd";
+  import type { Qotd } from "../lib/Interfaces";
   import { MiscManager } from "$lib/MiscManager";
 
   let qotd: Qotd = $page.data.qotd;
@@ -16,11 +16,11 @@
 <div>
   <Card img="/images/qotd.jpg">
     <h5
-      class="mb-2 text-md font-bold tracking-tight text-gray-900 dark:text-white"
+      class="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white"
     >
     {qotd.quote}
     </h5>
-    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 leading-tight">
+    <p class="mb-3 font-normal text-sm text-gray-700 dark:text-gray-400 leading-tight">
       -- by {qotd.source}
     </p>
     <Button on:click={refresh}
