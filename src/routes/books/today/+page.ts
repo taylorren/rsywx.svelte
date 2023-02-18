@@ -1,5 +1,5 @@
 /** @type {import('./$types').PageLoad} */
-import { BookManager } from "../../../lib/BookManager";
+import { BookManager } from "$lib/BookManager";
 
 export async function load() {
   const bm:BookManager= new BookManager();

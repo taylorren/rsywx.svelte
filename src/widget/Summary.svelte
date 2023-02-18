@@ -26,7 +26,7 @@
         >{summary.vc.toLocaleString("en-US")}</span
       >次。
     </p>
-    <Button>
+    <Button href="/books/title/-">
       浏览藏书总目&nbsp;<svg
         xmlns="http://www.w3.org/2000/svg"
         width="16"

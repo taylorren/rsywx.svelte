@@ -34,7 +34,7 @@
         ><Chevron aligned>藏书</Chevron></NavLi
       >
       <Dropdown triggeredBy="#nav-menu1" class="w-44 z-20">
-        <DropdownItem href="/book/title/all">总目</DropdownItem>
+        <DropdownItem href="/books/title/-" target="_self">总目</DropdownItem>
         <DropdownItem>Settings</DropdownItem>
         <DropdownItem>Earnings</DropdownItem>
         <DropdownDivider />

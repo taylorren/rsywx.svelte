@@ -15,6 +15,13 @@ export class BookManager {
     return data;
   }
 
+  async getBookByType(type: string, key: string, page: number):Promise<Book[]>{
+    const uri=BASE_URI+"/books/list/"+type+"/"+key+"/"+page;
+    const data=await this._getBooks(uri);
+    
+    return data;
+  }
+
   async getBookById(bookId: string): Promise<Book> {
     const uri = BASE_URI + "/books/" + bookId;
     const data = await this._getBook(uri);
