@@ -2,13 +2,13 @@
   import { Card, Button } from "flowbite-svelte";
   import { page } from "$app/stores";
 
-  import type { Summary } from "../lib/Summary";
+  import type { Summary } from "../lib/Interfaces";
 
   const summary: Summary = $page.data.summary;
 </script>
 
 <div>
-  <Card img="/images/default.jpg">
+  <Card img="/images/bookshelf.webp">
     <h5
       class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
     >

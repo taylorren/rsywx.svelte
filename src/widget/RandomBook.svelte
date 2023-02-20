@@ -15,6 +15,7 @@
 
 <div>
   <Card img={book.img}>
+    <Badge color="red" rounded>手气不错</Badge>
     <h5
       class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
     >

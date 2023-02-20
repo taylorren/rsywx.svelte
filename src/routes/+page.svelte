@@ -8,9 +8,9 @@
   import ReadSummary from "../widget/ReadSummary.svelte";
   //export let data;
 </script>
-
+<title>任氏有无轩 | 藏书、读书、博客、维客、资源</title>
 <div class="grow">
-  <div class="flex flex-row flex-wrap m-8 gap-4 justify-center">
+  <div class="flex flex-row flex-wrap m-8 gap-4 justify-center items-baseline">
     <LatestBook />
     <Summary />
     <RandomBook />
