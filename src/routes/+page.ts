@@ -1,12 +1,14 @@
 /** @type {import('./$types').PageLoad} */
-import { ReadManager } from "../lib/ReadManager";
-import { BookManager } from "../lib/BookManager";
-import { MiscManager } from "../lib/MiscManager";
+import { ReadManager } from "$lib/ReadManager";
+import { BookManager } from "$lib/BookManager";
+import { MiscManager } from "$lib/MiscManager";
+import { BlogManager } from "$lib/BlogManager";
 
 export async function load() {
   const bm:BookManager= new BookManager();
   const mm:MiscManager=new MiscManager();
   const rm:ReadManager=new ReadManager();
+  const blm:BlogManager=new BlogManager();
 
 
   const latestBook=await bm.getLatestBook(1);
@@ -15,6 +17,7 @@ export async function load() {
   const booksToday=await bm.getBookToday();
 
   const readSummary=await rm.getSummary();
+  const lbp=await blm.getLatestBlog()
   
 
   const qotd=await mm.getQotd();
@@ -26,5 +29,6 @@ export async function load() {
     booksToday: booksToday,
     readSummary: readSummary,
     qotd: qotd,
+    lbp: lbp,
   };
 }

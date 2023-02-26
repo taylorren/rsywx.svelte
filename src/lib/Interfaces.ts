@@ -29,4 +29,9 @@ export interface Summary {
     vc: number
 }
 
+export interface BlogPost {
+    link: string,
+    title: string,
+}
+
 export const BASE_URI="http://lumen";

@@ -6,6 +6,7 @@
   import Summary from "../widget/Summary.svelte";
   import Qotd from "../widget/Qotd.svelte";
   import ReadSummary from "../widget/ReadSummary.svelte";
+  import LatestBlog from "../widget/LatestBlog.svelte";
   //export let data;
 </script>
 <title>任氏有无轩 | 藏书、读书、博客、维客、资源</title>
@@ -47,6 +48,7 @@
         </Button>
       </Card>
     </div>
+    <LatestBlog/>
     <div>
       <Card img="/images/image-1.webp">
         <h5

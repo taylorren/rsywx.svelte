@@ -4,10 +4,10 @@
   import { BookManager } from "../lib/BookManager";
 
   let book = $page.data.randomBook;
-
+  
   async function refresh() {
     const bm = new BookManager();
-    let rb = await bm.getRandomBook();
+    const rb = await bm.getRandomBook();
 
     book = rb[0];
   }
