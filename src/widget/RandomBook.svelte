@@ -7,7 +7,7 @@
   
   async function refresh() {
     const bm = new BookManager();
-    const rb = await bm.getRandomBook();
+    const rb = await bm.getRandomBook(1, {fetch});
 
     book = rb[0];
   }

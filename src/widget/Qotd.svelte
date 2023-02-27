@@ -8,7 +8,7 @@
 
   async function refresh() {
     const mm = new MiscManager()
-    qotd=await mm.getQotd();
+    qotd=await mm.getQotd({fetch});
     
   }
 </script>

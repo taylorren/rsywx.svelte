@@ -1,30 +1,30 @@
 import type { Book, Summary } from "./Interfaces";
 import { BASE_URI } from './Interfaces';
 export class BookManager {
-  async getLatestBook(count = 1): Promise<Book[]> {
+  async getLatestBook(count = 1, {fetch}): Promise<Book[]> {
     const uri = BASE_URI + "/books/latest/" + count;
-    const data = await this._getBooks(uri);
+    const data = await this._getBooks(uri, {fetch});
 
     return data;
   }
 
-  async getRandomBook(count = 1): Promise<Book[]> {
+  async getRandomBook(count = 1, {fetch}): Promise<Book[]> {
     const uri = BASE_URI + "/books/random/" + count;
-    const data = await this._getBooks(uri);
+    const data = await this._getBooks(uri, {fetch});
 
     return data;
   }
 
-  async getBookByType(type: string, key: string, page: number):Promise<Book[]>{
+  async getBookByType(type: string, key: string, page: number, {fetch}):Promise<Book[]>{
     const uri=BASE_URI+"/books/list/"+type+"/"+key+"/"+page;
-    const data=await this._getBooks(uri);
+    const data=await this._getBooks(uri, {fetch});
     
     return data;
   }
 
-  async getBookById(bookId: string): Promise<Book> {
+  async getBookById(bookId: string, {fetch}): Promise<Book> {
     const uri = BASE_URI + "/books/" + bookId;
-    const data = await this._getBook(uri);
+    const data = await this._getBook(uri, {fetch});
 
     return data;
   }
@@ -51,14 +51,14 @@ export class BookManager {
     return data;
   }
 
-  private async _getBook(uri: string): Promise<Book> {
+  private async _getBook(uri: string, {fetch}): Promise<Book> {
     const ret = await fetch(uri);
     const json = await ret.json();
     const data = await json["data"] as Book;
 
     return data;
   }
-  private async _getBooks(uri: string): Promise<Book[]> {
+  private async _getBooks(uri: string, { fetch }): Promise<Book[]> {
     const ret = await fetch(uri);
     const json = await ret.json();
     const data = await json["data"] as Book[];

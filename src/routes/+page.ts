@@ -4,15 +4,15 @@ import { BookManager } from "$lib/BookManager";
 import { MiscManager } from "$lib/MiscManager";
 import { BlogManager } from "$lib/BlogManager";
 
-export async function load() {
+export async function load({ fetch }) {
   const bm:BookManager= new BookManager();
   const mm:MiscManager=new MiscManager();
   const rm:ReadManager=new ReadManager();
   const blm:BlogManager=new BlogManager();
 
 
-  const latestBook=await bm.getLatestBook(1);
-  const randomBook=await bm.getRandomBook(1);
+  const latestBook=await bm.getLatestBook(1, {fetch});
+  const randomBook=await bm.getRandomBook(1, {fetch});
   const summary=await bm.getSummary();
   const booksToday=await bm.getBookToday();
 
@@ -20,7 +20,7 @@ export async function load() {
   const lbp=await blm.getLatestBlog()
   
 
-  const qotd=await mm.getQotd();
+  const qotd=await mm.getQotd({fetch});
 
   return {
     latestBook: latestBook[0],
