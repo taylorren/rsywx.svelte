@@ -19,7 +19,7 @@
     <Qotd/>
     <ReadSummary/>
     <div>
-      <Card img="/images/image-1.webp">
+      <Card img="/images/default.jpg">
         <h5
           class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
         >
@@ -50,7 +50,7 @@
     </div>
     <LatestBlog/>
     <div>
-      <Card img="/images/image-1.webp">
+      <Card img="/images/default.jpg">
         <h5
           class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
         >

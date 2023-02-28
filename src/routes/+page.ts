@@ -13,11 +13,11 @@ export async function load({ fetch }) {
 
   const latestBook=await bm.getLatestBook(1, {fetch});
   const randomBook=await bm.getRandomBook(1, {fetch});
-  const summary=await bm.getSummary();
-  const booksToday=await bm.getBookToday();
+  const summary=await bm.getSummary({fetch});
+  const booksToday=await bm.getBookToday({fetch});
 
-  const readSummary=await rm.getSummary();
-  const lbp=await blm.getLatestBlog()
+  const readSummary=await rm.getSummary({fetch});
+  const lbp=await blm.getLatestBlog(1, {fetch})
   
 
   const qotd=await mm.getQotd({fetch});

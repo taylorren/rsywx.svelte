@@ -29,7 +29,7 @@ export class BookManager {
     return data;
   }
 
-  async getSummary():Promise<Summary> {
+  async getSummary({fetch}):Promise<Summary> {
     const uri = BASE_URI + "/books";
     const ret = await fetch(uri);
     const json = await ret.json();
@@ -38,7 +38,7 @@ export class BookManager {
     return data;
   }
 
-  async getBookToday() {
+  async getBookToday({fetch}) {
     const today = new Date();
     const m = today.getMonth() + 1;
     const d = today.getDate();

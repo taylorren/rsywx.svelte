@@ -2,7 +2,7 @@ import type { ReadSummary } from "./Interfaces";
 import { BASE_URI } from './Interfaces';
 
 export class ReadManager {
-  async getSummary() : Promise<ReadSummary>{
+  async getSummary({fetch}) : Promise<ReadSummary>{
     const uri=BASE_URI+"/readings";
 
     const ret = await fetch(uri);
