@@ -17,7 +17,9 @@ export async function load({ fetch }) {
   const booksToday=await bm.getBookToday({fetch});
 
   const readSummary=await rm.getSummary({fetch});
+
   const lbp=await blm.getLatestBlog(1, {fetch})
+  const bt=await blm.getBlogToday({fetch});
   
 
   const qotd=await mm.getQotd({fetch});
@@ -30,5 +32,6 @@ export async function load({ fetch }) {
     readSummary: readSummary,
     qotd: qotd,
     lbp: lbp,
+    bt: bt,
   };
 }

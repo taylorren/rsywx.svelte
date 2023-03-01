@@ -9,4 +9,13 @@ export class BlogManager {
     
     return data;
   }
+
+  async getBlogToday({fetch}) {
+    const uri=BASE_URI+"blogs/today";
+    const ret=await fetch(uri);
+    const json=await ret.json();
+    const data=await json['data'];
+
+    return data;
+  }
 }
