@@ -6,7 +6,7 @@
 </script>
 
 <div>
-  <Card img="/images/default.jpg">
+  <Card img="/images/writing.jpg">
     <h5
       class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
     >

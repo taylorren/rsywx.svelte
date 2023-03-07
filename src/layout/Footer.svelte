@@ -19,6 +19,12 @@
           alt="任氏有无轩"
           name="任氏有无轩"
         />
+        <p>&nbsp;</p>
+        <div
+          class="mb-7 text-sm text-gray-900 uppercase dark:text-white"
+        >
+          这是一个专注于藏书、读书、写作、分享资源的个人站点。
+        </div>
       </div>
       <div class="grid grid-cols-4 gap-8 sm:gap-6 sm:grid-cols-4">
         <div>
@@ -30,6 +36,9 @@
           <FooterLinkGroup>
             <FooterLink liClass="mb-4" href="https://kit.svelte.dev/"
               >SvelteKit</FooterLink
+            >
+            <FooterLink liClass="mb-4" href="https://www.typescriptlang.org/"
+              >TypeScript</FooterLink
             >
             <FooterLink liClass="mb-4" href="https://flowbite-svelte.com/"
               >Flowbite-Svelte</FooterLink
@@ -77,7 +86,10 @@
     <div class="sm:flex sm:items-center sm:justify-between">
       <FooterCopyright href="/" by="任氏有无轩主人" />
       <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
-        <FooterIcon href="https://twitter.com/taylorren" class="text-gray-400 hover:text-gray-900">
+        <FooterIcon
+          href="https://twitter.com/taylorren"
+          class="text-gray-400 hover:text-gray-900"
+        >
           <svg
             class="w-5 h-5"
             fill="currentColor"
@@ -88,7 +100,10 @@
             /></svg
           >
         </FooterIcon>
-        <FooterIcon href="https://www.facebook.com/taylor.ren" class="text-gray-400 hover:text-gray-900">
+        <FooterIcon
+          href="https://www.facebook.com/taylor.ren"
+          class="text-gray-400 hover:text-gray-900"
+        >
           <svg
             class="w-5 h-5"
             fill="currentColor"
@@ -101,7 +116,10 @@
             /></svg
           >
         </FooterIcon>
-        <FooterIcon href="https://github.com/taylorren" class="text-gray-400 hover:text-gray-900">
+        <FooterIcon
+          href="https://github.com/taylorren"
+          class="text-gray-400 hover:text-gray-900"
+        >
           <svg
             class="w-5 h-5"
             fill="currentColor"
