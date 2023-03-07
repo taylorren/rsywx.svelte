@@ -9,6 +9,7 @@
   import LatestBlog from "../widget/LatestBlog.svelte";
   import BlogToday from "../widget/BlogToday.svelte";
   import Lakers from "../widget/Lakers.svelte";
+  import Weather from "../widget/Weather.svelte";
   //export let data;
 </script>
 <title>任氏有无轩 | 藏书、读书、博客、维客、资源</title>
@@ -23,5 +24,6 @@
     <BlogToday/>
     <LatestBlog/>
     <Lakers/>
+    <Weather/>
   </div>
 </div>
