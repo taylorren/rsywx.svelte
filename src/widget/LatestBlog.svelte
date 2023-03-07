@@ -1,5 +1,6 @@
 <script lang="ts">
   import { Card, Button, Badge } from "flowbite-svelte";
+  import { IMG_URI } from "$lib/Interfaces";
   import { page } from "$app/stores";
 
   const data = $page.data.lbp;
@@ -7,7 +8,7 @@
 </script>
 
 <div>
-  <Card img={lbp.media}>
+  <Card img={IMG_URI+lbp.media}>
     <Badge color="red" rounded>最新博客</Badge>
     <h5
       class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
