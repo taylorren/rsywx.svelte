@@ -2,7 +2,7 @@
     import { Card, Button } from 'flowbite-svelte';
 </script>
 <div>
-    <Card img="/images/weather.jpg">
+    <Card img="/images/szc.jpg">
       <h5
         class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
       >
