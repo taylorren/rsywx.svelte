@@ -1,7 +1,7 @@
 /** @type {import('./$types').PageLoad} */
 import { BookManager } from "$lib/BookManager";
 
-export async function load({ params }) {
+export async function load({ params, fetch }) {
   const bm: BookManager = new BookManager();
 
   const type=params.type;
@@ -12,7 +12,7 @@ export async function load({ params }) {
   }
 
 
-  const books = await bm.getBookByType(type, key, cpage);
+  const books = await bm.getBookByType(type, key, cpage, {fetch});
 
   return {
     books: books,

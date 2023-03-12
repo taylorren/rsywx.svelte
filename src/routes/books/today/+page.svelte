@@ -2,7 +2,6 @@
     import { page } from '$app/stores';
 
     const books=$page.data.booksToday;
-    console.log(books);
 </script>
 
 {#each books as book}

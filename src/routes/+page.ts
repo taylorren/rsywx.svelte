@@ -23,6 +23,7 @@ export async function load({ fetch }) {
   
 
   const qotd=await mm.getQotd({fetch});
+  const lakers=await mm.getLakersSummary({fetch});
 
   return {
     latestBook: latestBook[0],
@@ -33,5 +34,6 @@ export async function load({ fetch }) {
     qotd: qotd,
     lbp: lbp,
     bt: bt,
+    lakers: lakers,
   };
 }

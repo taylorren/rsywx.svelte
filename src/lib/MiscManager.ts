@@ -10,4 +10,13 @@ export class MiscManager {
 
     return data[0];
   }
+
+  async getLakersSummary({fetch}) {
+    const uri=BASE_URI+'/lakers';
+    const ret = await fetch(uri);
+    const json = await ret.json();
+    const data = await json["data"];
+
+    return data;
+  }
 }
