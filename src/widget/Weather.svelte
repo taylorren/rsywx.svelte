@@ -4,12 +4,6 @@
 
     const weather=$page.data.weather.weather;
     const style=$page.data.weather.lifestyle;
-
-
-    console.log(weather);
-    console.log(style);
-
-
 </script>
 <div>
     <Card img="/images/szc.jpg">
