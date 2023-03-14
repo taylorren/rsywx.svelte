@@ -19,4 +19,13 @@ export class MiscManager {
 
     return data;
   }
+
+  async getWeather({fetch}) {
+    const uri=BASE_URI+'/weather';
+    const ret = await fetch(uri);
+    const json = await ret.json();
+    const data = await json["data"];
+
+    return data;
+  }
 }

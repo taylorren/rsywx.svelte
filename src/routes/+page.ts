@@ -24,6 +24,7 @@ export async function load({ fetch }) {
 
   const qotd=await mm.getQotd({fetch});
   const lakers=await mm.getLakersSummary({fetch});
+  const weather=await mm.getWeather({fetch});
 
   return {
     latestBook: latestBook[0],
@@ -35,5 +36,6 @@ export async function load({ fetch }) {
     lbp: lbp,
     bt: bt,
     lakers: lakers,
+    weather: weather,
   };
 }

@@ -21,7 +21,7 @@
       class="dark:text-red-600 text-gray-600 font-bold"
       >{lakers.per}%</span>。
     </p>
-    <Button>
+    <Button href="/lakers/{lakers.year}">
       详细记录&nbsp; <svg
         xmlns="http://www.w3.org/2000/svg"
         width="16"
